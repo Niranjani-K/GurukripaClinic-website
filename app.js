@@ -57,10 +57,6 @@ const postSchema = new mongoose.Schema( {
         type: Date,
        default: Date.now()
     },
-    img: {
-        type:String,
-        required: false
-    }
 });
 
 const Post = mongoose.model("Post", postSchema);
@@ -140,16 +136,17 @@ app.route("/admin/compose").get(async(req,res) => {
 
 
 app.post("/admin/compose",async(req,res) => {
-    if(req.session.email && req.cookies.user_sid){
+    if(req.session.email && req.session){
         const post = new Post({
             title: req.body.title,
             content: req.body.content,
-            markdown: req.body.markdown, 
+            markdown: req.body.markdown,
+    
         });
     
-        post.save(function(err){
+         post.save(function(err){
             if(!err){
-                res.redirect("/admin/posts");
+                res.redirect("/posts");
             }
         });
     }else{

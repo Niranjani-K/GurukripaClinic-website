@@ -11,6 +11,7 @@
   }
 body{
     margin:0;
+    height:100%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 html, body {
@@ -219,7 +220,6 @@ ul.contact li a{
   
 }
 .home-about{ 
-    margin: 2vh 0vh;
     border:none;
     width:100%;
     min-height:70vh;
@@ -230,23 +230,21 @@ ul.contact li a{
 }
 .about-clinic-home{
     float: left;
-    width: 38%;
     min-height:56vh;
     background: #E3F0F7;
 }
 .opening-hours-home{
-    float: left;
-    width:25%;
+  float: left;
     min-height:56vh;
-    margin-right:30px;
     background-color: white;
     border-radius: 5%;
     text-align: center;
     padding:0px;
+    margin-left: 2%;
 }
 .about-doctor-home{
-    float: left;
-    width:25%;
+  float: left;
+    margin-left: 2%;
     min-height:56vh;
     background-color: steelblue;
     border-radius: 5%;
