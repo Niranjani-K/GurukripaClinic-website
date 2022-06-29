@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gurukripa Clinic</title>
+<link rel = "stylesheet" type = "text/css" href = "/css/styles.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+</head>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+<body>
+    <h1>Gurukripa clinic</h1>
+    <div class = "topnav" id = "myTopnav">
+        <a href="/" >HOME</a>
+        <a href = "/about">ABOUT</a>
+        <a href = "/updates">UPDATES</a>
+        <a href = "/appointment">BOOK AN APPOINTMENT</a>
+        <a href = "/home#Get-directions ">GET DIRECTIONS</a>
+        <a href = "/home#contact_details">CONTACT US</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+</div>

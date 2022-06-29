@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title><%= post.title %></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+    <h1 style="color: #fff;">Gurukripa clinic</h1>
+    <div class = "container" style = "border:1px steelblue solid;margin-top:10px">
+        <div class = "mb-2" ><h2><%= post.title %></h2></div>
+        <div class = "text-muted mb-2"><%= post.date.toLocaleDateString() %></div>
+        
+        <a href = "/updates" class = "btn btn-secondary mb-2">All Articles</a>
+        <div >
+            <p class = "mb-1"><%= post.markdown %></p>
+        </div>
+           
+    </div>
+<%- include("partials/footer"); -%>
+

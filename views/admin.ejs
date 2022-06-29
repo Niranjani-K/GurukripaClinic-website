@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = UTF-8 >
+    <title>GuruKripa Clinic Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type = "text/css" href = "/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+</head>
+<script>
+    
+function showPassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+var exists = false;
+</script>
+
+<body>
+    <h1 style="color: #fff;">Gurukripa clinic</h1>
+    <div class = "container">
+        <div class ="row align-items-center my-5">
+            <div class = "col-sm-3 col-md-4 mx-auto">
+                <div class ="text-center login-title my-5">
+                    <div class = "account-wall">
+                        <img id="profile-img" class=" rounded-circle profile-img-card" src= "https://png.pngtree.com/png-vector/20190919/ourlarge/pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1742031.jpg" style = "max-width: 60%;"alt = ""/>
+                        <p id="profile-name" class="profile-name-card"></p>
+                        <p id="profile-name" class="profile-name-card"></p>
+                        <% if(exists){ %>
+                            <pr style="color: red;">Incorrect Password</pr>
+                         <% } %>   
+                        <form class="form-signin" action = "/admin" method="POST">
+                            <input type = "password" placeholder="Enter password" class ="form-control form-group" required name="password" id = "password">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="showPassword()">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                 Show Password
+                                </label>
+                              </div>
+                            <button class ="btn btn-lg btn-primary btn-block" type = "submit">Continue</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <div class = "copyright">
+        <p>© All rights reserved | GuruKripa Clinic</p>
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,21 @@
+<%- include("partials/headerAdmin"); -%>
+    <div class = "container" style = "border:1px steelblue solid;margin-top:10px">
+        <div class = "mb-2" ><h2><%= post.title %></h2></div>
+            <div class = "text-muted mb-2"><%= post.date.toLocaleDateString() %></div>
+            
+            <a href = "/admin/posts" class = "btn btn-secondary">All Articles</a>
+            <a href = "/admin/posts/edit/<%= post.id %>" class = "btn btn-info">EDIT</a>
+            <a href = "/admin/posts/delete/<%= post.id %>" class = "btn btn-danger" onclick="return confirm('Are you sure you want to delete this post?');">DELETE</a>
+            
+
+            <div >
+                <p class = "mb-1"><%= post.markdown %></p>
+            </div>
+           
+    </div>
+
+<div class = "copyright">
+    <p>© All rights reserved | GuruKripa Clinic</p>
+</div>
+</body>
+</html>

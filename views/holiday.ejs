@@ -1,0 +1,24 @@
+<%- include("partials/headerAdmin"); -%>
+        <div class="container">
+            <h3 class="mb-4" >Holidays</h3>
+        
+            <form action="/admin/holiday" method="POST">
+               
+                  <div class="form-group">
+                    <label for="holiday">Enter your days of absence from clinic</label>
+                    <textarea  name="holiday" id="holiday" class="form-control" placeholder = "if one day enter only the day or enter the range , The line goes 'The clinic will be closed '"></textarea>
+                  </div>
+                  <a href="/admin/adminPage" class="btn btn-secondary">Cancel</a>
+                  <button type="submit" class="btn btn-primary">Save</button>
+                  
+            </form>
+            
+            <a href = "/admin/appointment/remove-holiday" class = "btn btn-danger">Delete old Holiday</a>
+            
+            </div>
+  <div class = "copyright">
+    <p>© All rights reserved | GuruKripa Clinic</p>
+</div>
+</body>
+</html>
+      

@@ -1,0 +1,62 @@
+
+<%- include("partials/header"); -%>
+<!-- <%  for(var i = holiday.length-1; i >= 0 ; --i){ %> -->
+  <% if(holiday){ %>
+  <div class = "holiday-announcement" style = "margin: 3% 10%; background-color:grey;width:80%;min-height:10vh; padding: 2%">
+    <p style = "color:white">The clinic will be closed <%= holiday[0].holiday %></p>
+  </div>
+  <% } %>
+<!-- <% } %> -->
+<h2 style = "color:steelblue;text-transform: uppercase;margin-top: 10vh; text-align: center;text-decoration: none; text-shadow: none;font-size: 5vh;">Book your in Clinic AppointmentT </h2>
+​<div class="appointment-row">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front call">
+            <!-- <h2>Call</h2> -->
+            <img src="images/doctorcall.jpg" alt="Call" style="width:300px;height:230px;">
+          </div>
+          <div class="flip-card-back">
+            <h3>Use any of the below numbers for an appointment</h3>
+            <a href = "tel:08026582245"  ><button>080-2658 2245</button></a><br>
+            <a href = "tel:+918618891182" ><button>+91 8618891182</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card connect2clinic">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <!-- <h2>Connect2Clinic</h2> -->
+            <img src="images/connect2clinic.jpg" alt="connect2clinic" style="width:300px;height:230px;">
+          </div> 
+          <div class="flip-card-back" >
+            <a href = "https://www.connect2clinic.com/doctor/pravina-shet" target = "_blank" >
+            <h3>Use Connect2Clinic website to make an appointment</h3>
+          </a> </div>
+        </div>
+      </div>
+      <div class="flip-card practo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <!-- <h2>Practo</h2> -->
+            <img src="images/practo.jpg" alt="Practo" style="width:300px;height:230px;">
+          </div>
+          <div class="flip-card-back" >
+            <a href = "https://www.practo.com/bangalore/clinic/gurukripa-clinic-jp-nagar-3-phase/overview" target = "_blank" >
+            <h3>Use the Practo website to make an appointment</h3>
+          </a></div>
+        </div>
+      </div>
+      <div class="flip-card onlineApp">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <!-- <h2>Practo</h2> -->
+            <img src="images/online-app.png" alt="Website" style="width:300px;height:230px;">
+          </div>
+          <div class="flip-card-back" >
+            <a href = "/book-appointment" target = "_blank" >
+            <h3>Use our website to book your appointment</h3>
+          </a></div>
+        </div>
+      </div>
+  </div>
+<%- include("partials/footer"); -%>

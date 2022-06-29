@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="~/Scripts/jquery-2.1.4.js"></script>
+<script>
+   function check() {
+            
+            var a = new Date(document.getElementById("AppDate").value) ;
+            var typeDay = a.getDay();
+   
+         	
+			 var time = document.getElementById("AppTime");
+    
+			if (!typeDay)
+            {
+				time.options.length=0;
+				time.options[0] = new Option('Select Slot', '');
+				time.options[1] = new Option('8:00AM - 9:00AM', '8:00AM - 9:00AM');
+				time.options[2] = new Option('9:00AM-10:00AM', '9:00AM-10:00AM');
+				time.options[3] = new Option('10:00AM-11:00AM', '10:00AM-11:00AM');
+			}
+			else {
+				
+				time.options.length=0;
+				time.options[0] = new Option('Select Slot', '');
+				time.options[1] = new Option('8:00AM - 9:00AM', '8:00AM - 9:00AM');
+				time.options[2] = new Option('6:30PM-7:00PM', '6:30PM-7:00PM');
+				time.options[3] = new Option('7:00PM-7:30PM', '7:00PM-7:30PM');
+				time.options[4] = new Option('7:30PM - 8:00PM', '7:30PM - 8:00PM');
+				time.options[5] = new Option('8:00PM - 8:30PM', '8:00PM - 8:30PM');
+				time.options[6] = new Option('8:30PM - 9:00PM', '8:30PM - 9:00PM');
+			}
+        }
+</script>
+</head>
+
+<body>
+   <h1 style="color: #fff;">Gurukripa clinic</h1>
+   <!-- <%  for(var i = holiday.length-1; i >= 0 ; --i){ %> -->
+    <% if(holiday){ %>
+      <div class = "holiday-announcement" style = "margin: 3% 10%; background-color:grey;width:80%;min-height:10vh; padding: 2%">
+        <p style = "color:white">The clinic will be closed <%= holiday[0].holiday %></p>
+      </div>
+    <% } %>
+  <!-- <% } %> -->
+<div class = "container mb-4" style = "margin-top: 2%;">
+    <form method = "POST" action = "/book-appointment">
+        <div class="form-group col-md-10">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name = "name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-row form-group" style  = "margin-left:1%">
+            <div class="form-group col-md-5">
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control" id="phone" name = "phone" >
+              </div>
+            <div class="form-group col-md-5">
+                <label for="email">Email Address</label>
+                <input type="text" class="form-control" id="email" name = "email" placeholder="To book the appointment your gmail is necessary" required>
+              </div>
+          </div>
+       
+        <div class="form-row form-group" style  = "margin-left:1%">
+            <div class= "form-group" >
+              <label style  = "margin-left:1%" >Date of Appointment</label> 
+              
+                <input type = "date" class="form-control input-group date" id="AppDate" name = "AppDate" onChange = "check()"  required>
+               
+            </div>
+            
+            
+           
+            <div class= "form-group" style  = "margin-left:2%" >
+              <label style  = "margin-left:2%" >Time of Appointment</label> 
+              <select class="form-control" id = "AppTime" name = "AppTime"> 
+                <option selected>SELECT YOUR TIME SLOT</option>
+              </select>
+            
+          </div>
+          </div>
+          <div class=" form-group col-md-10">
+            <label for="message" class="form-label">Enter Message</label>
+            <textarea class="form-control" id="message" rows="3" name = "message"></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary">Confirm Appointment</button>
+        <input type = "reset" class = "btn btn-danger"  onclick="return confirm('Are you sure you want to clear all entered details?')">
+        <a href = "/appointment"  class = "btn btn-secondary">Return</a>
+      </form>
+</div>
+
+</html>

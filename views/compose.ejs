@@ -1,0 +1,63 @@
+<%- include("partials/headerAdmin"); -%>
+      
+
+      
+        <div class="container">
+          <h4 class="mb-4">NEW POST</h4>
+            <form action="/admin/compose" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input required  type="text" name="title" id="title" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="content">content</label>
+                    <textarea name="content" id="content" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <!-- <label for="image" class = "form=label">IMG-URL</label> -->
+                    <!-- <input  type="text" name="image" id="image" class="form-control"> -->
+                    <!-- <label for="img" class = "form-label">UPLOAD IMAGE</label>
+                    <input type = "file" name = "img" id = "img"  class="form-control-file" > -->
+
+                  </div>
+                  <div class="form-group">
+                    <label for="markdown">Markdown</label>
+                    <textarea required name="markdown" id="markdown" class="form-control"></textarea>
+                  </div>
+                  
+                  <a href="/admin/posts" class="btn btn-secondary">Cancel</a>
+                  <button type="submit" class="btn btn-primary">Save</button>
+
+            </form>
+            </div>
+            <br><br>
+            <!-- <div class="container">
+              
+              <h3 class = "mb - 4">WITHOUT IMAGES</h3>
+              <form action="/admin/compose-without" method="POST">
+                  <div class="form-group">
+                      <label for="title">Title</label>
+                      <input required  type="text" name="title" id="title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="content">content</label>
+                      <textarea name="content" id="content" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="markdown">Markdown</label>
+                      <textarea required name="markdown" id="markdown" class="form-control"></textarea>
+                    </div>
+                    
+                    <a href="/admin/posts" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Save</button>
+  
+              </form>
+              </div> -->
+              <div class = "copyright">
+                <p>© All rights reserved | GuruKripa Clinic</p>
+            </div>
+            </body>
+            </html>
+        
+
+

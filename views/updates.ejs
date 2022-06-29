@@ -1,0 +1,18 @@
+
+    <%- include("partials/header"); -%>
+<section style = " grid-template-columns:1fr;background-color: #fff;">
+    <div class = "container-posts">
+    <h2 style = "color:steelblue">UPDATES</h2>
+    <span> <!-- line here --></span>
+    <% for(var i = posts.length-1; i >= 0 ; --i){ %>
+        <div class = "posts">
+            <h3 style = "margin-bottom: 0%;"><%= posts[i].title %></h3>
+            <h5><%= posts[i].date.toLocaleDateString() %></h5>
+            <p><%= posts[i].content %></p>
+            <a href = "/updates/<%= posts[i].id %>" class = "button">Read More</a>
+            
+        </div>
+   <% } %>
+</div>
+</section>
+<%- include("partials/footer"); -%>
