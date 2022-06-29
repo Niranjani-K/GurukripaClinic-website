@@ -146,7 +146,7 @@ app.post("/admin/compose",async(req,res) => {
     
          post.save(function(err){
             if(!err){
-                res.redirect("/posts");
+                res.redirect("/admin/posts");
             }
         });
     }else{
