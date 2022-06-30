@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Appointment</title>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="~/Scripts/jquery-2.1.4.js"></script>
 <script>
@@ -38,7 +39,7 @@
 </head>
 
 <body class = "d-flex flex-column min-vh-100">
-   <h1 style="color: #fff;">Gurukripa clinic</h1>
+   <h1>Gurukripa clinic</h1>
    <!-- <%  for(var i = holiday.length-1; i >= 0 ; --i){ %> -->
     <% if(holiday){ %>
       <div class = "holiday-announcement" style = "margin: 3% 10%; background-color:grey;width:80%;min-height:10vh; padding: 2%">
@@ -90,8 +91,8 @@
         <a href = "/appointment"  class = "btn btn-secondary">Return</a>
       </form>
 </div>
-<%- include("partials/copyright") -%>
 </body>
+
 <style>
    h1{
     background: steelblue;
@@ -100,7 +101,9 @@
     text-align:center;
     margin:auto;  
     font-size:7vh;
+    width: 100%;
     padding: 30px;
-    }
+   }
+
 </style>
 </html>
