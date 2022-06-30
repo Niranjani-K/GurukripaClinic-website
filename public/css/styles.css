@@ -229,23 +229,26 @@ ul.contact li a{
    
 }
 .about-clinic-home{
-    float: left;
-    min-height:56vh;
-    background: #E3F0F7;
+  float: left;
+  min-height:56vh;
+  width: 33.3%;
+  background: #E3F0F7;
 }
 .opening-hours-home{
-  float: left;
+    float: left;
     min-height:56vh;
+    width: 28.3%;
     background-color: white;
     border-radius: 5%;
     text-align: center;
-    padding:0px;
+    padding:1.2%;
     margin-left: 2%;
 }
 .about-doctor-home{
-  float: left;
+    float: left;
     margin-left: 2%;
     min-height:56vh;
+    width: 26.3%;
     background-color: steelblue;
     border-radius: 5%;
     text-align: center;
@@ -276,8 +279,7 @@ ul.contact li a{
 
 @media screen and (max-width:980px){
   .home-about .opening-hours-home , .about-clinic-home  , .about-doctor-home{
-    flex-basis: 40%;
-   
+    flex-basis: 40%;   
     margin-bottom:5px;
   }
   .home-about .about-clinic-home{
@@ -285,7 +287,7 @@ ul.contact li a{
     width: 80%;
   }
   .opening-hours-home , .about-doctor-home{
-    width:44%;
+    width:40%;
   }
   
 }
@@ -293,13 +295,13 @@ ul.contact li a{
   .home-about .opening-hours-home , .about-clinic-home  , .about-doctor-home{
     float: none;
     flex-basis: 100%;
-    margin-bottom:0 0 5px 0 ;
+    
   }
   .home-about .about-clinic-home{
     flex-basis: 100%;
   }
   .opening-hours-home , .about-doctor-home , .about-clinic-home{
-    width:70%;
+    width:80%;
     padding: 10px 5px;
   }
   
@@ -317,12 +319,12 @@ ul.contact li a{
  ul{
     list-style: none;
 }
-.col{
-    float: left;
-    width: 27.33%;
-    height:200px;
+.cols{
+  float: left;
+  width: 27.33%;
+  height:200px;
 }
-.col li{
+.cols li{
     background-color: rgb(255,255,255);
     margin-left:10px;
     margin-bottom: 20px;
@@ -330,10 +332,10 @@ ul.contact li a{
     line-height:40px;
     
 }
-.col:first-child{
+.cols:first-child{
     margin-left: 8%;
 }
-.col li span{
+.cols li span{
     color:rgb(255,255,255);
     background-color: steelblue;
     text-align:center;
@@ -352,15 +354,15 @@ li:hover span{
 }
 
 @media screen and (max-width:980px){
-  .services-row , .col{
+  .services-row , .cols{
     flex-basis:40%;
     margin-bottom:5px;
   }
-  .services-row , .col:last-child{
+  .services-row , .cols:last-child{
     flex-basis: 100%;
     margin:0;
   }
-  .col{
+  .cols{
     width:40%;
   }
   .services-row , .col:nth-last-child(2){
@@ -371,27 +373,27 @@ li:hover span{
     font-size: 1.2em;
     text-align: center;
   }
-  .col:first-child{
+  .cols:first-child{
     margin-left: 0%;
   }
  
 }
 @media screen and (max-width:680px) {
-  .services-row , .col{
+  .services-row , .cols{
     flex-basis:100%;
     float:none;
-    margin:0 0 5px 0;
+    margin-bottom: 2%;
+    margin:0 0px 0 0;
 
   }
-  .col:first-child{
+  .cols:first-child{
     margin-left: 0%;
+    
   }
-  .col{
-    width:70%;
+  .cols{
+    width:80%;
   }
 
-  
- 
 }
 
 
