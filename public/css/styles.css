@@ -220,6 +220,7 @@ ul.contact li a{
   
 }
 .home-about{ 
+    justify-content: center;
     border:none;
     width:100%;
     min-height:70vh;
@@ -237,7 +238,7 @@ ul.contact li a{
 .opening-hours-home{
     float: left;
     min-height:56vh;
-    width: 28.3%;
+    width: 26.3%;
     background-color: white;
     border-radius: 5%;
     text-align: center;
