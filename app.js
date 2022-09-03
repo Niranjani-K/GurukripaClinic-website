@@ -10,7 +10,6 @@ const ejs = require('ejs')
 var dotenv = require('dotenv');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
-var morgan = require('morgan');
 var alert = require('alert');
 
 
